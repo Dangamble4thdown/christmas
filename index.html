@@ -29,32 +29,25 @@
         button:hover {
             background-color: #457b9d;
         }
-        #gif-container {
-            margin-top: 30px;
+        video {
             display: none;
-        }
-        img {
-            width: 80%;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
     <h1>🎄 Merry Christmas! 🎅</h1>
     <button id="gift-button">Click for your Christmas gift</button>
-    <div id="gif-container">
-        <img src="https://video.twimg.com/tweet_video/1535994921773039617.mp4" alt="Christmas GIF">
-    </div>
+    <video id="christmas-gif" src="https://video.twimg.com/tweet_video/1535994921773039617.mp4" autoplay loop></video>
 
     <script>
         const button = document.getElementById('gift-button');
-        const gifContainer = document.getElementById('gif-container');
+        const video = document.getElementById('christmas-gif');
 
         button.addEventListener('click', () => {
-            gifContainer.style.display = 'block';
-            button.style.display = 'none';
+            video.style.display = 'block'; // Show the video element
+            video.play(); // Start playing the video
+            button.style.display = 'none'; // Hide the button
+            video.requestFullscreen(); // Trigger fullscreen mode
         });
     </script>
 </body>
