@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Gift 🎁</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e63946, #f1faee);
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #1d3557;
+            color: white;
+            font-size: 1.5em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #457b9d;
+        }
+        #gif-container {
+            margin-top: 30px;
+            display: none;
+        }
+        img {
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>🎄 Merry Christmas! 🎅</h1>
+    <button id="gift-button">Click for your Christmas gift</button>
+    <div id="gif-container">
+        <img src="https://video.twimg.com/tweet_video/1535994921773039617.mp4" alt="Christmas GIF">
+    </div>
+
+    <script>
+        const button = document.getElementById('gift-button');
+        const gifContainer = document.getElementById('gif-container');
+
+        button.addEventListener('click', () => {
+            gifContainer.style.display = 'block';
+            button.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
